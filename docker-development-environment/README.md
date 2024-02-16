@@ -6,43 +6,37 @@
 
 ### Users and passwords
 
-<em>Passwords that are not in the docker-compose.yml file will be in the .env file within the same directory.</em>
+<em>Passwords that are not in the docker-compose.yml file will be in the .env files within the same directory.</em>
 
-## - Network creation
+## Docker
+
+### Network creation
 
 ```bash
 docker network create my-network
 ```
 
-## - Docker creation
+### Docker creation
 
 ```bash
 docker-compose up -d
-
-or
-
-docker-compose -f <docker-file-name>.yml up -d
 ```
 
 ## - Jenkins
 
 ```bash
 # Admin password
-
 docker exec -it jenkins /bin/bash -c "cat /var/jenkins_home/secrets/initialAdminPassword"
 ```
 
 ## - Sonarqube
 
 ```bash
-
 # Login / Authentication
-
 User: admin
 Password: admin
 
 # WSL Requirement (if needed)
-
 sudo sysctl -w vm.max_map_count=262144
 ```
 
@@ -55,7 +49,6 @@ sudo sysctl -w vm.max_map_count=262144
 
 ```bash
 # SQL Developer
-
 User: system
 Password: Oracle_123
 SID: XE  (Uppercase)
@@ -65,20 +58,13 @@ SID: XE  (Uppercase)
 
 ```bash
 # PGAdmin (Local)
-
 Use host.docker.internal instead of localhost
-
-# Create a particular database
-
-Just modify the files/initdb.sql file for your need.
 ```
 
 ## - RabbitMQ
 
 ```bash
-
 # Login / Authentication
-
 User: rabbitmq
 Password: rabbitmq
 ```
@@ -86,9 +72,23 @@ Password: rabbitmq
 ## - Keycloak
 
 ```bash
-
 # Login / Authentication
-
 User: admin
 Password: admin
+```
+
+## Prometheus
+
+
+Prometheus: http://localhost:9090/
+
+Main endpoint: http://localhost:8080/actuator
+
+## Grafana
+
+Grafana: http://localhost:3000/
+
+```bash
+username: grafana
+password: grafana
 ```
