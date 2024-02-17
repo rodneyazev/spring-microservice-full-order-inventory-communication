@@ -8,7 +8,7 @@
 
 <em>Passwords that are not in the docker-compose.yml file will be in the .env files within the same directory.</em>
 
-## Docker
+## - Docker
 
 ### Network creation
 
@@ -81,14 +81,14 @@ User: admin
 Password: admin
 ```
 
-## Prometheus
+## - Prometheus
 
 
 Prometheus: http://localhost:9090/
 
 Main endpoint: http://localhost:8080/actuator
 
-## Grafana
+## - Grafana
 
 Grafana: http://localhost:3000/
 
